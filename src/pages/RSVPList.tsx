@@ -8,7 +8,6 @@ interface RSVP {
 	name: string;
 	rsvp: 'yes' | 'no';
 	phone: string,
-	createdAt: number;
 }
 
 const RSVPList: React.FC = () => {
@@ -112,7 +111,6 @@ const RSVPList: React.FC = () => {
 							<th>Guest Name</th>
 							<th>RSVP</th>
 							<th>Phone</th>
-							<th>Created At</th>
 							<th></th>
 						</tr>
 						</thead>
@@ -124,7 +122,6 @@ const RSVPList: React.FC = () => {
 									<td>{rsvp.name}</td>
 									<td>{rsvp.rsvp}</td>
 									<td>{rsvp.phone}</td>
-									<td>{rsvp.createdAt}</td>
 									<td>
 										<button
 											onClick={() => handleDeleteClick(index)}
