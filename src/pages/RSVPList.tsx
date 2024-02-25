@@ -5,11 +5,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 interface RSVP {
 	id: number;
-	guest_name: string;
-	partner_name?: string;
+	name: string;
 	rsvp: 'yes' | 'no';
+	phone: string,
 	createdAt: number;
-	email: string
 }
 
 const RSVPList: React.FC = () => {
@@ -21,7 +20,7 @@ const RSVPList: React.FC = () => {
 
 	const deleteRSVP = async (id: number) => {
 		try {
-			const response = await fetch(`https://65cdc2d8c715428e8b3efe00.mockapi.io/anhthu-charlesbester/api/rsvp/${id}`, {
+			const response = await fetch(`https://65dad667bcc50200fcdd3c08.mockapi.io/api/rsvp/${id}`, {
 				method: 'DELETE',
 			});
 			if (response.status !== 200) {
@@ -71,7 +70,7 @@ const RSVPList: React.FC = () => {
 	useEffect(() => {
 		const fetchRsvps = async () => {
 			try {
-				const response = await fetch('https://65cdc2d8c715428e8b3efe00.mockapi.io/anhthu-charlesbester/api/rsvp');
+				const response = await fetch('https://65dad667bcc50200fcdd3c08.mockapi.io/api/rsvp');
 				if (!response.ok) {
 					throw new Error(`Error fetching RSVPs: ${response.statusText}`);
 				}
@@ -111,9 +110,8 @@ const RSVPList: React.FC = () => {
 						<tr>
 							<th></th>
 							<th>Guest Name</th>
-							<th>Partner Name</th>
 							<th>RSVP</th>
-							<th>Email</th>
+							<th>Phone</th>
 							<th>Created At</th>
 							<th></th>
 						</tr>
@@ -123,10 +121,9 @@ const RSVPList: React.FC = () => {
 							return (
 								<tr key={rsvp.id}>
 									<th>{index + 1}</th>
-									<td>{rsvp.guest_name}</td>
-									<td>{rsvp.partner_name}</td>
+									<td>{rsvp.name}</td>
 									<td>{rsvp.rsvp}</td>
-									<td>{rsvp.email}</td>
+									<td>{rsvp.phone}</td>
 									<td>{rsvp.createdAt}</td>
 									<td>
 										<button
