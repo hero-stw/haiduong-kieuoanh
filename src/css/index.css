@@ -981,7 +981,7 @@ a:hover {
 .t8-event-content .title {
   font-size: 48px;
   font-family: var(--font-1);
-  text-shadow: -2px 2px 0px rgba(28, 28, 28, 0.25);
+  /*text-shadow: -2px 2px 0px rgba(28, 28, 28, 0.25);*/
   color: var(--color-1);
   margin-bottom: 10px;
   max-width: 600px;
@@ -1099,7 +1099,7 @@ a:hover {
 }
 
 .t8-contact-form {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
@@ -1116,7 +1116,7 @@ a:hover {
 .t8-form-group .form-input {
   font-size: 16px;
   line-height: 125%;
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--color-1);
   margin-top: 3px;
   width: 376px;
   padding: 0 10px;
@@ -1719,8 +1719,11 @@ a:hover {
     left: 75%;
   }
   /****** Location *******/
+  .t8-location {
+    padding:40px 20px;
+  }
   .t8-location-date-default {
-    left: 23%;
+    left: 30%;
   }
   .t8-location .container {
     width: 100% !important;
@@ -1747,7 +1750,7 @@ a:hover {
     width: 170px;
   }
   .t8-location-top p {
-    font-size: 20px;
+    font-size: 36px;
   }
   /****** Link *******/
   .t8-link-text {
@@ -1978,7 +1981,8 @@ a:hover {
     padding: 50px 0;
   }
   .t8-gallery-title p {
-    font-size: 20px;
+    font-size: 24px;
+    margin-top: 20px;
   }
   .t8-list-img {
     columns: 2 156px;
@@ -2069,7 +2073,7 @@ a:hover {
     padding-right: 10%;
   }
   .t8-event-content .title {
-    font-size: 20px;
+    font-size: 36px;
   }
   .t8-event-content .address,
   .t8-event-content .home {
@@ -2083,7 +2087,7 @@ a:hover {
     margin: auto;
   }
   .t8-contact-text .paragraph {
-    font-size: 14px;
+    font-size: 16px;
   }
   .t8-contact-text .title {
     font-size: 45px;
@@ -2092,12 +2096,11 @@ a:hover {
     flex-direction: column;
   }
   .t8-contact-form {
-    padding-left: 2%;
-    margin: 0 0;
     margin-top: 40px;
+    padding-inline: 20px;
   }
   .t8-contact-form .form-input {
-    width: 335px;
+    width: 100%;
   }
   .sticky-btn-wrapper {
     transform: translate(-2rem, -2rem) scale(0.7);
